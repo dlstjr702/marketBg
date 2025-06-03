@@ -1,5 +1,5 @@
 # marketBg
-php학습을 통한 기초를 활용하여 작업 쇼핑몰
+php학습을 통한 기초를 활용하여 작업 쇼핑몰(채소관련 쇼핑몰)
 
 활용언어 - HTML5, CSS3, JAVASCRIPT, PHP
 
