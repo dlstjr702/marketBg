@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/**********************************************************************************************************************/
+/* RESET */
+/**********************************************************************************************************************/
+
+html {
+    font-size: 10px;
+}
+
+/* 여백 및 라인 초기화 */
+*,
+body,
+div,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form,
+figure,
+figcaption,
+pre,
+label,
+header,
+nav,
+footer,
+main,
+section,
+aside,
+article {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* a 링크 초기화 */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+/* 폰트 초기화 */
+/*body,*/
+input,
+textarea,
+select,
+button,
+table,
+pre {
+    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* 폰트 스타일 초기화 */
+em,
+address {
+    font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 dt,
+dd {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* 테두리 초기화 */
+img,
+fieldset {
+    border: 0 none;
+}
+
+/* 버튼 초기화 */
+button {
+    background: none;
+    border: 0;
+}
+
+/* 반응형 */
+video,
+img {
+    max-width: 100%;
+}
+
+/*이미지여백 제거*/
+img {
+    display: block;
+}
+
+/* 클릭 가능한 요소에 포인트 커서 */
+a[href],
+input[type='checkbox'],
+input[type='radio'],
+input[type='submit'],
+input[type='image'],
+label[for],
+select,
+button,
+.pointer {
+    cursor: pointer;
+}
+
+/**********************************************************************************************************************/
