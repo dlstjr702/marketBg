@@ -16,6 +16,7 @@
                                     </div>
                                 </div>
                                 <div class="ntc_rows">
+                                    <!-- row S -->
                                     <div class="ntc_row_hd">
                                         <div class="ntc_col">
                                             <p class="tit">번호</p>
@@ -33,7 +34,28 @@
                                             <p class="tit">작성자</p>
                                         </div>
                                     </div>
-                                    <a href="#!" class="ntc_row">
+                                    <!-- row E -->
+                                    <!-- row S -->
+                                    <a href="/marketBg/sub/notice_view.php" class="ntc_row">
+                                        <div class="ntc_col">
+                                            <p class="num">2</p>
+                                        </div>
+                                        <div class="ntc_col">
+                                            <p class="tit">게시판 글을 2개 작성했습니다.</p>
+                                        </div>
+                                        <div class="ntc_col">
+                                            <p class="date">2025/06/05</p>
+                                        </div>
+                                        <div class="ntc_col">
+                                            <p class="view_num">5</p>
+                                        </div>
+                                        <div class="ntc_col">
+                                            <p class="name">글쓴이</p>
+                                        </div>
+                                    </a>
+                                    <!-- row E -->
+                                    <!-- row S -->
+                                    <a href="/marketBg/sub/notice_view.php" class="ntc_row">
                                         <div class="ntc_col">
                                             <p class="num">1</p>
                                         </div>
@@ -50,6 +72,7 @@
                                             <p class="name">글쓴이</p>
                                         </div>
                                     </a>
+                                    <!-- row E -->
                                 </div>
                             </div>
                         </div>

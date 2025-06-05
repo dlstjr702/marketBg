@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <?php
+        session_start();
+    ?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>marketBG</title>
@@ -8,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/marketBG/css/reset.css">
     <link rel="stylesheet" href="/marketBG/css/style.css">
+    <link rel="stylesheet" href="/marketBG/css/resposive.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 

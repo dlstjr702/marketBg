@@ -1,18 +1,5 @@
+
 <?php include("../inc/header.php") ?>
-
-
-
-<?php
-session_start();
-if(!isset($_SESSION['username'])) {
-    echo "<script>location.replace('login.php');</script>";            
-}
-
-else {
-    $username = $_SESSION['username'];
-    $name = $_SESSION['name'];
-} 
-?>
 
 
 <!-- MAIN S -->
@@ -79,8 +66,18 @@ else {
                                 </div>
                                 <div class="txt_bx">
                                     <h3 class="tit">
-                                        <?php echo "<b>$username($name)</b> 님, 반갑습니다!";?>
-                                        <b>2025.06.04.14:58</b> 접속하셨습니다.
+                                        <!-- </?php echo "<b>$username($name)</b> 님, 반갑습니다!";?> -->
+                                        <!-- <b>2025.06.04.14:58</b> 접속하셨습니다. -->
+                                        <?php
+                                            if(isset( $_SESSION["id"])) {
+                                                $user_id = $_SESSION['id'];
+                                                $user_name = $_SESSION['name'];
+                                                echo "<b>$user_name</b>님 <br>환영합니다.";
+                                                echo "<a href=\"../member/logout.php\">[로그아웃]</a>";
+                                            } else {
+                                                echo "<p>로그인을 해 주세요. <a href=\"../member/login.php\">[로그인]</a></p>";
+                                            }
+                                        ?>
                                     </h3>
                                 </div>
                             </div>
@@ -94,7 +91,7 @@ else {
                                 <li>
                                     <a href="#!">
                                         <i class="xi-basket"></i>
-                                        장바구니
+                                        장바구니 
                                     </a>
                                 </li>
                                 <li>
