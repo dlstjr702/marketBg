@@ -25,10 +25,14 @@
                             </div>
                         </div>
                         <!-- 이미지 영역 E -->
+
                         <!-- 폼 영역 S -->
                         <div class="col">
-                            <form action="">
+                            <form action="/main/main.php" method="post">
                                 <div class="form_cont">
+                                    <?php
+                                        echo "<div class='alert_txt'>". $login_err."</div>"  
+                                    ?>
                                     <dl class="form_line">
                                         <dt>
                                             <p class="tit">아이디</p>
@@ -45,7 +49,7 @@
                                         </dt>
                                         <dd>
                                             <div class="inp_bx">
-                                                <input type="text" name="passwd" placehoder="비밀번호를 입력해주세요.">
+                                                <input type="password" name="password" placehoder="비밀번호를 입력해주세요.">
                                             </div>
                                         </dd>
                                     </dl>
@@ -56,11 +60,47 @@
                                         <a href="#!">비밀번호찾기</a>
                                         <a href="#!">회원가입</a>
                                     </div>
-                                    <button type="button" class="btn_login">로그인</button>
+                                    <button type="submit" class="btn_login" onclick="button()">로그인</button>
                                 </div>
                             </form>
                         </div>
                         <!-- 폼 영역 E -->
+
+
+
+
+
+                           <?php
+                           session_start();
+                           $host = 'localhost';
+                           $user = 'Admin';
+                           $pw = 'Admin1234';
+                           $db_name = 'marketBgDb';
+                           $mysqli = new mysqli($host, $user, $pw, $db_name); //db 연결
+
+                           //login.php에서 입력받은 id, password
+                           $username = $_POST['id'];
+                           $userpass = $_POST['pw'];
+
+                           $q = "SELECT * FROM member WHERE id = '$username' AND pass = '$userpass'";
+                           $result = $mysqli->query($q);
+                           $row = $result->fetch_array(MYSQLI_ASSOC);
+
+                           //결과가 존재하면 세션 생성
+                           if ($row != null) {
+                              $_SESSION['username'] = $row['id'];
+                                 $_SESSION['name'] = $row['name'];
+                              echo "<script>location.replace('/main/main.php');</script>";
+                              exit;
+                           }
+
+                           //결과가 존재하지 않으면 로그인 실패
+                           if($row == null){
+                              echo "<script>alert('Invalid username or password')</script>";
+                              echo "<script>location.replace('login.php');</script>";
+                              exit;
+                           }
+                        ?>
                     </div>
                 </div>
             </div>
